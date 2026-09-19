@@ -1,0 +1,17 @@
+CREATE DATABASE BibliotecaDB;
+GO
+USE BibliotecaDB;
+GO
+CREATE TABLE Libro
+(
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    titulo VARCHAR(150) NOT NULL,
+    autor VARCHAR(100) NOT NULL,
+    categoria VARCHAR(80) NOT NULL,
+    anio INT NOT NULL
+);
+GO
+SELECT * FROM Libro;
+
+ALTER TABLE Libro
+ADD editorial VARCHAR(100);
